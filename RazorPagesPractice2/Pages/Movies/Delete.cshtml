@@ -1,0 +1,29 @@
+﻿@page
+@model RazorPagesPractice2.Pages.Movies.DeleteModel
+@{
+}
+<h1>Delete</h1>
+
+<h4>Are you sure you want to delete? </h4>
+
+<table class="table table-dark table-striped mt-3">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m=>m.Movie.Title)</th>
+            <th>@Html.DisplayNameFor(m=>m.Movie.ReleaseDate)</th>
+            <th>@Html.DisplayNameFor(m=>m.Movie.Price)</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>@Html.DisplayFor(m=>m.Movie.Title)</td>
+            <td>@Html.DisplayFor(m=>m.Movie.ReleaseDate)</td>
+            <td>@Html.DisplayFor(m=>m.Movie.Price)</td>
+        </tr>
+    </tbody>
+</table>
+<form method="post">
+    <input type="submit" value ="Delete" class="btn btn-primary"/>
+    <a asp-page="Index" class="btn btn-info">Back</a>
+</form>
